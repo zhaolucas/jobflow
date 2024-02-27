@@ -22,21 +22,23 @@ We conceive and execute a design that solves a real-world problem. In creating t
 
 For this project, we start from scratch. Doing so will allow us to revisit your front-end abilities in the context of React. 
 
-User Story: 
-As a job seeker after a bootcamp,
-I want a platform where I can not only search for relevant job opportunities but also track my job applications and progress,
-So that I can manage my job search more efficiently and increase my chances of landing a job that matches my skills and aspirations.
+APIs: final ones used.
+
+`User Story:`  
+`As a job seeker after a bootcamp,`  
+`I want a platform where I can not only search for relevant job opportunities but also track my job applications and progress,`  
+`So that I can manage my job search more efficiently and increase my chances of landing a job that matches my skills and aspirations.`  
 
 Link to the deployed application: https://zhaolucas.github.io/jobflow (to be deployed to netlify)
 
 ## Presentation: 
 
-Elevator pitch: a one minute description of your application.
-Concept: What is your user story? What was your motivation for development?
-Process: What were the technologies used? How were tasks and group roles broken down and assigned? What challenges did you encounter? What were your successes?
-Demo: Show your stuff!
-Directions for future development
-Links to to the deployed application and the GitHub repository
+1. Elevator pitch: a one minute description of your application.
+2. Concept: What is your user story? What was your motivation for development?
+3. Process: What were the technologies used? How were tasks and group roles broken down and assigned? What challenges did you encounter? What were your successes?
+4. Demo: Show your stuff!
+5. Directions for future development
+6. Links to to the deployed application and the GitHub repository
 
 ## Installation
 
@@ -46,15 +48,21 @@ For setting up the development environment:
 2. Open the HTML, CSS, and JavaScript files in a code editor like VS Code.
 3. Make sure to install Bootstrap for responsive design.
 4. Use Git for version control and commit your changes to GitHub.
+5. Build react app with following commands: 
+
+`npm start`
+`npm test`
+`npm run build`
+`npm run eject`
 
 ## Usage 
 
 jobflow simplifies job hunting and application tracking. The main sections include:
 
-1. Navigation Bar: 3 pages 
-2. Home page: the list of jobs applied.  
-3. Job form page: interested, applied and interview stage. 
-4. Job search page: job title, location, salary range, and job type. 
+1. Navigation Bar: on all 3 pages- Current Jobs, Add Jobs, Search Jobs. 
+2. Home page: Current Jobs- job status of the list of jobs added including those on watchlist and during interview stage; + a motivation quote section at the bottom of the page. 
+3. Job form page: Add Jobs- jobs interested, applied and interview stage. 
+4. Job search page: Search Jobs- search bar for job title, location, salary range, and job type. 
 5. Footer: Links to contributors' github. 
 
 The following animation demonstrates the application functionality:
@@ -64,19 +72,12 @@ The following animation demonstrates the application functionality:
 ## Features
 
 Use React.
-
 Use Node.js.
-
 Have both GET and POST routes for retrieving and adding new data.
-
 Be deployed using Netlify.
-
 Use at least two libraries, packages, or technologies that we haven't discussed.
-
 Have a polished front end/UI.
-
 Meet good quality coding standards (indentation, scoping, naming).
-
 Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
 ## Credits
@@ -102,17 +103,3 @@ NIL
 
 ---
 © 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
-
-
-# Getting Started with Create React App
-
-you can run:
-
-### `npm start`
-
-### `npm test`
-
-### `npm run build`
-
-### `npm run eject`
-
