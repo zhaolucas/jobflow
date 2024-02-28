@@ -5,9 +5,10 @@
     box-sizing: border-box;
 }
 
-/* Setting black background */
+
 body {
     background-color: #000;
+    /* Setting black background */
     color: #fff;
     /* Setting text color to white for better visibility */
 }
@@ -16,63 +17,53 @@ body {
 input[type="text"],
 select {
     width: 100%;
-    /* Make input fields and select elements full width */
     padding: 10px;
-    /* Add padding for better spacing */
     margin-bottom: 10px;
-    /* Add margin between elements */
     border: none;
-    /* Remove default border */
     border-radius: 5px;
-    /* Add border radius for rounded corners */
     background-color: transparent;
-    /* Set background color to transparent */
     color: #fff;
-    /* Text color */
 }
 
 /* Styling select elements */
 select {
     appearance: none;
-    /* Remove default appearance */
     -webkit-appearance: none;
-    /* For Safari */
     -moz-appearance: none;
-    /* For Firefox */
     background-color: rgba(255, 255, 255, 0);
-    /* Set transparent background */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
     /* Add custom arrow icon */
-    background-position: right 10px center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
     /* Position the arrow icon */
-    background-repeat: no-repeat;
+    background-position: right 10px center;
     /* Ensure the arrow icon is not repeated */
-    -moz-appearance: none;
+    background-repeat: no-repeat;
     /* Firefox */
-    -webkit-appearance: none;
+    -moz-appearance: none;
     /* Webkit browsers */
-    padding-right: 20px;
+    -webkit-appearance: none;
     /* Add padding for arrow icon */
+    padding-right: 20px;
     color: #fff;
-    /* Text color */
+
 }
 
 /* Styling select dropdown arrow icon in Firefox */
 @-moz-document url-prefix() {
     select {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
         /* Add custom arrow icon */
-        background-position: right 10px center;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
         /* Position the arrow icon */
-        background-repeat: no-repeat;
+        background-position: right 10px center;
         /* Ensure the arrow icon is not repeated */
+        background-repeat: no-repeat;
+
     }
 }
 
 /* Styling select dropdown options */
 select option {
-    background-color: #333;
     /* Dark background color for options */
-    color: #fff;
+    background-color: #333;
     /* Text color for options */
+    color: #fff;
 }
