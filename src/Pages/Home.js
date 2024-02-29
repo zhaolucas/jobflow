@@ -11,7 +11,11 @@ export default function Home() {
         setquoteList(data);
         console.log(data);
         let randomIndex = Math.floor(Math.random() * data.length);
-        setRandomQuote(data[randomIndex]);
+      //  setRandomQuote(data[randomIndex]);
+      let quote = data[randomIndex];
+      quote.author = quote.author.replace(', type.fit', ' ');
+      setRandomQuote(quote);
+
       });
   }, []);
   return (

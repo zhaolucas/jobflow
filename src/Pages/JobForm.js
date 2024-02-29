@@ -34,6 +34,7 @@ function JobForm({ onJobSubmit }) {
       jobStatus: 'interested',
       additionalNotes: ''
     }); // Reset form after submission
+    localStorage.setItem("Job data",JSON.stringify(jobData))
   };
 
   return (
