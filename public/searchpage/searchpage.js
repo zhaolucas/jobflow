@@ -21,7 +21,7 @@ function searchResults() {
   let hours = document.getElementById("hours").value;
   salarySort(salary);
   APIURL = customURL(jobTitle, location, minsalary, maxsalary, jobType, hours);
-  console.log (APIURL);
+  callAPI(APIURL);
 }
 
  function jobTypeCheck(basicAddress, jobType) {
@@ -57,4 +57,14 @@ function customURL(jobTitle, location, minsalary, maxsalary, jobType, hours) {
   basicAddress = jobTypeCheck(basicAddress, jobType);
   basicAddress = hoursType(basicAddress, hours);
   return basicAddress;
+}
+
+function callAPI(customURL) {
+  fetch(customURL)
+    .then(function (response) {
+    return response.json();
+  })
+    .then(function (data) {
+    console.log(data)
+        })
 }
