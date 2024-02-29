@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 export default function Sample() {
+    const [sample, setSample] = useState([]);
     useEffect(() => {
         fetch("https://type.fit/api/quotes")
           .then(function (response) {
