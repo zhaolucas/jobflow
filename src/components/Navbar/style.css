@@ -1,9 +1,9 @@
-.bg-body-tertiary {
-    background-color: white !important; 
+.nav-bg {
+    background-color: rgb(55, 53, 53); 
   }
   
   .navbar-brand, .nav-link {
-    color: black !important; 
+    color: white; 
     transition: color 0.3s ease-in-out; 
   }
   
@@ -13,9 +13,5 @@
   
   .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.1); 
-  }
-  
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='%23FFF' viewBox='0 0 30 30'><path d='M0 6h30v2H0zm0 8h30v2H0zm0 8h30v2H0z'/></svg>") !important; 
   }
   
