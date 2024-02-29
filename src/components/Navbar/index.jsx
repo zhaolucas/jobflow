@@ -12,9 +12,9 @@ function Navigation() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#">Current Jobs</Nav.Link>
-                        <Nav.Link href="#">Add Job</Nav.Link>
-                        <Nav.Link href="#">Search Jobs</Nav.Link>
+                        <Nav.Link href="./">Current Jobs</Nav.Link>
+                        <Nav.Link href="./JobForm">Add Job</Nav.Link>
+                        <Nav.Link href="./JobSearch">Search Jobs</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
