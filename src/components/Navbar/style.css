@@ -1,0 +1,17 @@
+.nav-bg {
+    background-color: rgb(55, 53, 53); 
+  }
+  
+  .navbar-brand, .nav-link {
+    color: white !important; 
+    transition: color 0.3s ease-in-out; 
+  }
+  
+  .navbar-brand:hover, .nav-link:hover {
+    color: #f8f9fa !important; 
+  }
+  
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.927); 
+  }
+  

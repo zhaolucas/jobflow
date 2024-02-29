@@ -6,12 +6,12 @@ function JobForm({ onJobSubmit }) {
     companyName: '',
     jobTitle: '',
     description: '',
-    salary: '',
     location: '',
-    jobType: 'remote',
-    employmentType: 'full-time',
+    salary: '',
+    jobType: '',
+    employmentType: '',
     linkToAd: '',
-    jobStatus: 'interested', 
+    jobStatus: '', 
     additionalNotes: ''
   });
 
@@ -26,12 +26,12 @@ function JobForm({ onJobSubmit }) {
       companyName: '',
       jobTitle: '',
       description: '',
-      salary: '',
       location: '',
-      jobType: 'remote',
-      employmentType: 'full-time',
+      salary: '',
+      jobType: '',
+      employmentType: '',
       linkToAd: '',
-      jobStatus: 'interested',
+      jobStatus: '',
       additionalNotes: ''
     }); // Reset form after submission
     localStorage.setItem("Job data",JSON.stringify(jobData))
@@ -42,8 +42,15 @@ function JobForm({ onJobSubmit }) {
       <input type="text" name="companyName" value={jobData.companyName} onChange={handleChange} placeholder="Company Name" required />
       <input type="text" name="jobTitle" value={jobData.jobTitle} onChange={handleChange} placeholder="Job Title" required />
       <textarea name="description" value={jobData.description} onChange={handleChange} placeholder="Job Description" required></textarea>
-      <input type="text" name="salary" value={jobData.salary} onChange={handleChange} placeholder="Salary" />
       <input type="text" name="location" value={jobData.location} onChange={handleChange} placeholder="Location" required />
+      <select name="salary" value={jobData.salary} onChange={handleChange} required>
+        <option value="below £20,000">Below £20,000</option>
+        <option value="£20,000-29,999">£20,000-29,999</option>
+        <option value="£30,000-39,999">£30,000-39,999</option>
+        <option value="£40,000-49,999">£40,000-49,999</option>
+        <option value="£50,000-59,999">£50,000-59,999</option>
+        <option value="above £60,000">Above £60,000</option>
+      </select>
       <select name="jobType" value={jobData.jobType} onChange={handleChange} required>
         <option value="remote">Remote</option>
         <option value="on-site">On-Site</option>
@@ -60,10 +67,12 @@ function JobForm({ onJobSubmit }) {
         <option value="interested">Interested</option>
         <option value="applied">Applied</option>
         <option value="interview">Interview Stage</option>
+        <option value="offered">Offered</option>
+        <option value="offered">Rejected</option>
       </select>
-      <input type="url" name="linkToAd" value={jobData.linkToAd} onChange={handleChange} placeholder="Link to Ad" />
+      <input type="url" name="linkToAd" value={jobData.linkToAd} onChange={handleChange} placeholder="Link to Job Advert/ Application Portal" />
       <textarea name="additionalNotes" value={jobData.additionalNotes} onChange={handleChange} placeholder="Additional Notes"></textarea>
-      <button type="submit">Submit Job</button>
+      <button type="submit">Add Job!</button>
     </form>
   );
 }
