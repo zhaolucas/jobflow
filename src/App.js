@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navigation from './components/Navbar';
 import { Home, JobForm, JobSearch} from './Pages';
 import './App.css';
+import { useEffect } from 'react';
+
+
+
 
 function App() {
   return (
@@ -15,6 +19,7 @@ function App() {
       </Routes>
     </Router>
   )
+
 }
 
 export default App;
