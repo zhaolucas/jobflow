@@ -43,13 +43,11 @@ function JobForm({ onJobSubmit }) {
       <textarea name="description" value={jobData.description} onChange={handleChange} placeholder="Job Description" required></textarea>
       <input type="text" name="salary" value={jobData.salary} onChange={handleChange} placeholder="Salary" />
       <input type="text" name="location" value={jobData.location} onChange={handleChange} placeholder="Location" required />
-      
       <select name="jobType" value={jobData.jobType} onChange={handleChange} required>
         <option value="remote">Remote</option>
         <option value="on-site">On-Site</option>
         <option value="hybrid">Hybrid</option>
       </select>
-
       <select name="employmentType" value={jobData.employmentType} onChange={handleChange} required>
         <option value="full-time">Full-Time</option>
         <option value="part-time">Part-Time</option>
@@ -57,7 +55,6 @@ function JobForm({ onJobSubmit }) {
         <option value="temporary">Temporary</option>
         <option value="internship">Internship</option>
       </select>
-
       <select name="jobStatus" value={jobData.jobStatus} onChange={handleChange} required>
         <option value="interested">Interested</option>
         <option value="applied">Applied</option>
