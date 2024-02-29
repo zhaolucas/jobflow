@@ -10,6 +10,18 @@ export default function Sample() {
             console.log(sample);
           });
       }, []);
+      return (
+        <div>
+          <h1>Test</h1>
+          <p>
+            {sample.map((item, index) => (
+              <li key={index}>{item.text}</li>
+              
+            ))}
+          </p>
+        </div>
+      );
+    }
 
 
 
