@@ -7,7 +7,7 @@ function Navigation() {
 
     return (
     <>
-        <Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar expand="lg" className="nav-bg">
             <Container>
                 <Navbar.Brand href="#home">JobFlow</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
