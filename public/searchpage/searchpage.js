@@ -1,30 +1,20 @@
-var contract;
-var permanent;
-var minsalary;
-var maxsalary;
-var fulltime;
-var parttime;
-var anyJobType;
-var anyHours;
-var jobTitle;
-var location;
+
 var resultsperpage = 20
 var apiKey = "e6b644fb61f2e5d8cb060935d76de379";
 var appID = "1cad4d53";
-var apiURL = `https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=${appID}&app_key=${apiKey}&results_per_page=${resultsperpage}`
-
-
-/* &what=Developer&where=London&salary_min=20000&salary_max=30000&full_time=1&contract=1` */
+var APIURL;
 
 function searchResults() {
-  jobTitle = document.getElementById("jobTitle").value;
-  location = document.getElementById("location").value;
+  let minsalary
+  let maxsalary
+  let jobTitle = document.getElementById("jobTitle").value;
+  let location = document.getElementById("location").value;
   let salary = document.getElementById("salary").value;
   let jobType = document.getElementById("jobType").value;
   let hours = document.getElementById("hours").value;
   salarySort(salary);
-  jobTypeCheck(jobType);
-  hoursType(hours);
+  APIURL = customURL(jobTitle, location, minsalary, maxsalary, jobType, hours);
+  console.log (APIURL)
 }
 
 function salarySort(salaryrange) {
@@ -33,43 +23,37 @@ function salarySort(salaryrange) {
   maxsalary = salaryArr[1];
 }
 
- function jobTypeCheck(jobTypeChoice) {
-  if (jobTypeChoice === "Permanent") {
-  contract = 0;
-  permanent = 1;
-  anyJobType = 0;
+ function jobTypeCheck(basicAddress, jobType) {
+  if (jobType === "Permanent") {
+    basicAddress.concat("&permanent=1");
   }
-  else if (jobTypeChoice === "Contract") {
-  contract = 1;
-  permanent = 0;
-  anyJobType = 0;
+  else if (jobType === "Contract") {
+    basicAddress.concat("&contract=1");
   }
   else {
-  contract = 0;
-  permanent = 0;
-  anyJobType = 1;
+    return basicAddress
     }
 }
  
-function hoursType(hoursTypeChoice) {
-  if (hoursTypeChoice === "PartTime") {
-  fulltime = 0;
-  parttime = 1;
-  anyHours = 0;
+function hoursType(basicAddress, hours) {
+  if (hours === "PartTime") {
+    basicAddress.concat("&part_time=1");
+    return basicAddress
   }
-  else if (hoursTypeChoice === "FullTime") {
-  fulltime = 1;
-  parttime = 0;
-  anyHours = 0;
+  else if (hours === "FullTime") {
+    basicAddress.concat("&full_time=1");
+    return basicAddress
   }
   else {
-  fulltime = 0;
-  parttime = 0;
-  anyHours = 1;
+    return basicAddress
   }
 }
 
-
+function customURL(jobTitle, location, minsalary, maxsalary, jobType, hours) {
+  let basicAddress = `https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=${appID}&app_key=${apiKey}&results_per_page=${resultsperpage}&what=${jobTitle}&where=${location}&salary_min=${minsalary}&salary_max=${maxsalary}`
+  basicAddress = jobTypeCheck(basicAddress, jobType);
+  basicAddress = hoursType(basicAddress, hours);
+}
 
 
 /* if condition met append dto URL, else append something else.*/
