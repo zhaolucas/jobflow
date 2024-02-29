@@ -3,7 +3,7 @@
   }
   
   .navbar-brand, .nav-link {
-    color: white; 
+    color: white !important; 
     transition: color 0.3s ease-in-out; 
   }
   
@@ -12,6 +12,6 @@
   }
   
   .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.1); 
+    border-color: rgba(255, 255, 255, 0.927); 
   }
   
