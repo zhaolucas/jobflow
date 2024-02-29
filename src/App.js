@@ -4,7 +4,7 @@ import Navigation from './components/Navbar';
 import { Home, JobForm, JobSearch} from './Pages';
 import './App.css';
 import { useEffect } from 'react';
-import Sample from './Pages/Home';
+
 
 
 
