@@ -65,6 +65,22 @@ function callAPI(customURL) {
     return response.json();
   })
     .then(function (data) {
-    console.log(data)
+      generateResults(data);
         })
+}
+
+
+function generateResults(data) {
+for (let i = 0; i < data.results.length; i++) {
+/* access data object and create div for each search result using properties available */
+console.log (data.results[i].title);
+console.log (data.results[i].company.display_name);
+console.log (data.results[i].description);
+console.log (data.results[i].location.display_name);
+console.log (data.results[i].salary_min);
+console.log (data.results[i].contract_time);
+console.log (data.results[i].contract_type);
+console.log (data.results[i].redirect_url);
+}
+
 }
