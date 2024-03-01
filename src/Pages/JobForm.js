@@ -116,11 +116,11 @@ function JobForm({ onJobSubmit }) {
         onChange={handleChange}
         required
       >
-        <option value="interested">Interested</option>
-        <option value="applied">Applied</option>
-        <option value="interview">Interview Stage</option>
-        <option value="offered">Offered</option>
-        <option value="offered">Rejected</option>
+        <option value="Interested">Interested</option>
+        <option value="Applied">Applied</option>
+        <option value="Interview">Interview Stage</option>
+        <option value="Offered">Offered</option>
+        <option value="Rejected">Rejected</option>
       </select>
       <input
         type="url"
