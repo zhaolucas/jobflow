@@ -59,6 +59,7 @@ function customURL(jobTitle, location, minsalary, maxsalary, jobType, hours) {
   return basicAddress;
 }
 
+/* takes custom URL created with user input and makes call to API server for results*/
 function callAPI(customURL) {
   fetch(customURL)
     .then(function (response) {
@@ -69,10 +70,9 @@ function callAPI(customURL) {
         })
 }
 
-
+/* access data object and create div for each search result using properties available */
 function generateResults(data) {
 for (let i = 0; i < data.results.length; i++) {
-/* access data object and create div for each search result using properties available */
 console.log (data.results[i].title);
 console.log (data.results[i].company.display_name);
 console.log (data.results[i].description);
