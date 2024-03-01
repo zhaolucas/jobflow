@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   <title>JobFlow</title>
 </head>
-
 <body>
   <h1>Search Jobs</h1>
   <input id="jobTitle" type="text" placeholder="Job Title">
@@ -30,10 +29,9 @@
     <option value="FullTime">Full Time</option>
     <option value="AnyHours">Any</option>
   </select>
-  <button onclick="searchResults()">Search Now</button>
+  <button onclick="searchResults(); clearResults()">Search Now</button>
+  <button onclick="clearResults()">Clear Search Results</button>
   <h2>Results</h2>
-  <div id="results"></div>
   <script src="searchpage.js"></script>
 </body>
-
 </html>
