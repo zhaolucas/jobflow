@@ -74,6 +74,11 @@ function callAPI(customURL) {
 function generateResults(data) {
 for (let i = 0; i < data.results.length; i++) {
   var div = document.createElement('div');
+  var a = document.createElement('a');
+  var link = document.createTextNode("CLICK HERE FOR FULL ADVERT");
+  a.appendChild(link); 
+  a.title = "CLICK HERE FOR FULL ADVERT";
+  a.href = data.results[i].redirect_url; 
   div.innerHTML = `
   <strong>Job Title:</strong> ${data.results[i].title} <br /><br />
   <strong>Job Description:</strong> ${data.results[i].description} <br /><br />
@@ -81,10 +86,8 @@ for (let i = 0; i < data.results.length; i++) {
   <strong>Salary:</strong> ${data.results[i].salary_min} <br /><br />
   <strong>Hours Type:</strong> ${data.results[i].contract_time} <br /><br />
   <strong>Job Type:</strong> ${data.results[i].contract_type} <br /><br />
-  <strong>Advert URL:</strong> ${data.results[i].redirect_url}
   `;
   div.setAttribute('class', 'resultsIndividual');
-  document.getElementById("results").appendChild(div);
+  document.getElementById("results").appendChild(div).appendChild(a);
 }
-
 }
