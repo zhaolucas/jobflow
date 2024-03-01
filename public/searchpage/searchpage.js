@@ -6,13 +6,7 @@ var apiKey = "e6b644fb61f2e5d8cb060935d76de379";
 var appID = "1cad4d53";
 var APIURL;
 
-/* Working */
-function salarySort(salaryrange) {
-  let salaryArr = salaryrange.split("-");
-  minsalary = salaryArr[0];
-  maxsalary = salaryArr[1];
-}
-
+/* function which has several sub functions that is activated up search button activation */
 function searchResults() {
   let jobTitle = document.getElementById("jobTitle").value.trim();
   let location = document.getElementById("location").value.trim();
@@ -24,6 +18,14 @@ function searchResults() {
   callAPI(APIURL);
 }
 
+/* function which seperates lower and upper values from salary range choosen to be compatible with API */
+function salarySort(salaryrange) {
+  let salaryArr = salaryrange.split("-");
+  minsalary = salaryArr[0];
+  maxsalary = salaryArr[1];
+}
+
+/* appends onto custom URL job type dependent on user choice */
  function jobTypeCheck(basicAddress, jobType) {
   if (jobType === "Permanent") {
     basicAddress = basicAddress.concat("&permanent=1");
@@ -37,7 +39,8 @@ function searchResults() {
     return basicAddress
     }
 }
- 
+
+/* appends onto custom URL hour type dependent on user choice */
 function hoursType(basicAddress, hours) {
   if (hours === "PartTime") {
     basicAddress = basicAddress.concat("&part_time=1");
@@ -52,6 +55,7 @@ function hoursType(basicAddress, hours) {
   }
 }
 
+/* creates custom URL for API based on user input */
 function customURL(jobTitle, location, minsalary, maxsalary, jobType, hours) {
   basicAddress = `https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=${appID}&app_key=${apiKey}&results_per_page=${resultsperpage}&what=${jobTitle}&where=${location}&salary_min=${minsalary}&salary_max=${maxsalary}`
   basicAddress = jobTypeCheck(basicAddress, jobType);
@@ -72,6 +76,9 @@ function callAPI(customURL) {
 
 /* access data object and create div for each search result using properties available */
 function generateResults(data) {
+  var parentdiv = document.createElement('div');
+  parentdiv.setAttribute('id', 'results');
+  document.body.appendChild(parentdiv);
 for (let i = 0; i < data.results.length; i++) {
   var div = document.createElement('div');
   var a = document.createElement('a');
@@ -92,9 +99,8 @@ for (let i = 0; i < data.results.length; i++) {
 }
 }
 
-
-/* 
-function removeDivsByClass(divClass) {
-  var element = document.getElementsByClassName(divClass);
+/* function for clearing current shown search results */
+function clearResults() {
+  var element = document.getElementById("results");
   element.parentNode.removeChild(element);
-} */
+} 
