@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import JobCard from "./../components/JobCard";
-import { json } from "react-router-dom";
+//import { json } from "react-router-dom";
 
 
 export default function Home() {

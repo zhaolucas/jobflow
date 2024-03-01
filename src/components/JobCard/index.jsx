@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 
 function JobCard() {
     const [selectedJobStatus, setSelectedJobStatus] = useState('Pending');
+    const jobDataFromLocalStorage = JSON.parse(localStorage.getItem('jobData')) || [];
 
     const handleJobStatusChange = (event) => {
         setSelectedJobStatus(event.target.value);
@@ -33,14 +34,15 @@ function JobCard() {
             style={{ width: '18rem' }}
             className="mb-2"
         >
-            <Card.Header>Company Name</Card.Header>
+            <Card.Header>Company Name: {jobDataFromLocalStorage[0]?.companyName}</Card.Header>
             <Card.Body>
-                <Card.Title> Job Title </Card.Title>
-                <Card.Text>Job Description</Card.Text>
-                <Card.Text>Salary</Card.Text>
-                <Card.Text>Location</Card.Text>
-                <Card.Text>Job Type</Card.Text>
-                <Card.Text>Link To Job Advert</Card.Text>
+                <Card.Title>Job Title: {jobDataFromLocalStorage[0]?.jobTitle} </Card.Title>
+                <Card.Text>Job Description: {jobDataFromLocalStorage[0]?.description}</Card.Text>
+                <Card.Text>Salary: {jobDataFromLocalStorage[0]?.salary}</Card.Text>
+                <Card.Text>Location: {jobDataFromLocalStorage[0]?.location}</Card.Text>
+                <Card.Text>Job Type: {jobDataFromLocalStorage[0]?.jobType}</Card.Text>
+                <Card.Text>Employment Type: {jobDataFromLocalStorage[0]?.employmentType}</Card.Text>
+                <Card.Text>Link To Job Advert: {jobDataFromLocalStorage[0]?.linkToAd}</Card.Text>
 
                 <Form.Group controlId="jobStatus">
                     <Form.Label>Job Status</Form.Label>
@@ -81,7 +83,7 @@ function JobCard() {
                     />
                 </Form.Group>
 
-                <Card.Text>Additional Notes</Card.Text>
+                <Card.Text>Additional Notes: {jobDataFromLocalStorage[0]?.additionalNotes}</Card.Text>
             </Card.Body>
         </Card >
     );
