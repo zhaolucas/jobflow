@@ -73,14 +73,18 @@ function callAPI(customURL) {
 /* access data object and create div for each search result using properties available */
 function generateResults(data) {
 for (let i = 0; i < data.results.length; i++) {
-console.log (data.results[i].title);
-console.log (data.results[i].company.display_name);
-console.log (data.results[i].description);
-console.log (data.results[i].location.display_name);
-console.log (data.results[i].salary_min);
-console.log (data.results[i].contract_time);
-console.log (data.results[i].contract_type);
-console.log (data.results[i].redirect_url);
+  var div = document.createElement('div');
+  div.innerHTML = `
+  <strong>Job Title:</strong> ${data.results[i].title} <br /><br />
+  <strong>Job Description:</strong> ${data.results[i].description} <br /><br />
+  <strong>Location:</strong> ${data.results[i].location.display_name} <br /><br />
+  <strong>Salary:</strong> ${data.results[i].salary_min} <br /><br />
+  <strong>Hours Type:</strong> ${data.results[i].contract_time} <br /><br />
+  <strong>Job Type:</strong> ${data.results[i].contract_type} <br /><br />
+  <strong>Advert URL:</strong> ${data.results[i].redirect_url}
+  `;
+  div.setAttribute('class', 'resultsIndividual');
+  document.getElementById("results").appendChild(div);
 }
 
 }
