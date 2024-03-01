@@ -81,7 +81,7 @@ for (let i = 0; i < data.results.length; i++) {
   a.href = data.results[i].redirect_url; 
   div.innerHTML = `
   <strong>Job Title:</strong> ${data.results[i].title} <br /><br />
-  <strong>Job Description:</strong> ${data.results[i].description} <br /><br />
+  <strong>Job Description:</strong> ${data.results[i].description}<br /><br />(use provided advert link below to see full description) <br /><br />
   <strong>Location:</strong> ${data.results[i].location.display_name} <br /><br />
   <strong>Salary:</strong> ${data.results[i].salary_min} <br /><br />
   <strong>Hours Type:</strong> ${data.results[i].contract_time} <br /><br />
