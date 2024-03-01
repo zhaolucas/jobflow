@@ -91,3 +91,10 @@ for (let i = 0; i < data.results.length; i++) {
   document.getElementById("results").appendChild(div).appendChild(a);
 }
 }
+
+
+/* 
+function removeDivsByClass(divClass) {
+  var element = document.getElementsByClassName(divClass);
+  element.parentNode.removeChild(element);
+} */

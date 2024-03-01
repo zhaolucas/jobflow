@@ -96,8 +96,25 @@ button:hover {
     padding: 20px;
     text-wrap: wrap;
     background-color: rgb(10, 71, 140);
+    font-family: "Bebas Neue", sans-serif;
 }
 
-h1 {
-margin-bottom: 10px;
+.resultsIndividual a
+{
+color: white;
+}
+
+
+
+
+h1, h2, input, option, button, select {
+font-family: "Bebas Neue", sans-serif;
+}
+
+h1, h2 {
+margin: 10px 0px;
+}
+
+input, option, button, select {
+font-size: 18px;   
 }
