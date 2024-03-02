@@ -46,6 +46,7 @@ function JobForm({ onJobSubmit }) {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
+        className="inputText"
         name="companyName"
         value={jobData.companyName}
         onChange={handleChange}
@@ -54,6 +55,7 @@ function JobForm({ onJobSubmit }) {
       />
       <input
         type="text"
+        className="inputText"
         name="jobTitle"
         value={jobData.jobTitle}
         onChange={handleChange}
@@ -62,6 +64,7 @@ function JobForm({ onJobSubmit }) {
       />
       <textarea
         name="description"
+        className="inputText"
         value={jobData.description}
         onChange={handleChange}
         placeholder="Job Description"
@@ -69,6 +72,7 @@ function JobForm({ onJobSubmit }) {
       ></textarea>
       <input
         type="text"
+        className="inputText"
         name="location"
         value={jobData.location}
         onChange={handleChange}
@@ -76,6 +80,8 @@ function JobForm({ onJobSubmit }) {
         required
       />
       <select
+        id='salary'
+        className="dropdown"
         name="salary"
         value={jobData.salary}
         onChange={handleChange}
@@ -89,6 +95,8 @@ function JobForm({ onJobSubmit }) {
         <option value="above £60,000">Above £60,000</option>
       </select>
       <select
+        id='jobType'
+        className="dropdown"
         name="jobType"
         value={jobData.jobType}
         onChange={handleChange}
@@ -99,6 +107,8 @@ function JobForm({ onJobSubmit }) {
         <option value="hybrid">Hybrid</option>
       </select>
       <select
+        id='employmentType'
+        className="dropdown"
         name="employmentType"
         value={jobData.employmentType}
         onChange={handleChange}
@@ -111,6 +121,8 @@ function JobForm({ onJobSubmit }) {
         <option value="internship">Internship</option>
       </select>
       <select
+        id='jobStatus'
+        className="dropdown"
         name="jobStatus"
         value={jobData.jobStatus}
         onChange={handleChange}
@@ -124,6 +136,7 @@ function JobForm({ onJobSubmit }) {
       </select>
       <input
         type="url"
+        className="inputText"
         name="linkToAd"
         value={jobData.linkToAd}
         onChange={handleChange}
@@ -131,11 +144,12 @@ function JobForm({ onJobSubmit }) {
       />
       <textarea
         name="additionalNotes"
+        className="inputText"
         value={jobData.additionalNotes}
         onChange={handleChange}
         placeholder="Additional Notes"
       ></textarea>
-      <button type="submit">Add Job!</button>
+      <button id='addJob' className="button" type="submit">Add Job!</button>
     </form>
   );
 }
