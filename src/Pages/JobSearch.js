@@ -22,16 +22,12 @@ const JobSearch = () => {
             <option value="FullTime">Full Time</option>
             <option value="AnyHours">Any</option>
         </select>
-        <button onclick="searchResults(); clearResults()">Search Now</button>
-        <button onclick="clearResults()">Clear Search Results</button>
+        <button onClick={searchResults}>Search Now</button>
+        <button onClick={clearResults}>Clear Search Results</button>
         <h2>Results</h2>
     </body>
     )
 }
-
-export default JobSearch;
-
-
 
 var basicAddress;
 var minsalary;
@@ -139,3 +135,7 @@ function clearResults() {
   var element = document.getElementById("results");
   element.parentNode.removeChild(element);
 } 
+
+
+export default JobSearch;
+
