@@ -1,26 +1,26 @@
-.job-card-interested {
-    background-color: #FFD700; /* Custom color for Interested status */
-    color: #000; /* Dark text on a light background */
+.interested {
+    background-color: #FFD700 !important; /* Custom color for Interested status */
+    color: #000 !important; /* Dark text on a light background */
 }
 
-.job-card-applied {
-    background-color: #87CEEB; /* Custom color for Applied status */
-    color: #000; /* Dark text on a light background */
+.applied {
+    background-color: #87CEEB !important; /* Custom color for Applied status */
+    color: #000 !important; /* Dark text on a light background */
 }
 
-.job-card-interviewed {
-    background-color: #808080; /* Custom color for Interviewed status */
-    color: #fff; /* Light text on a dark background */
+.interviewed {
+    background-color: #808080 !important; /* Custom color for Interviewed status */
+    color: #fff !important; /* Light text on a dark background */
 }
 
-.job-card-offered {
-    background-color: #32CD32; /* Custom color for Offered status */
-    color: #000; /* Dark text on a light background */
+.offered {
+    background-color: #32CD32 !important; /* Custom color for Offered status */
+    color: #000 !important; /* Dark text on a light background */
 }
 
-.job-card-rejected {
-    background-color: #FF6347; /* Custom color for Rejected status */
-    color: #fff; /* Light text on a dark background */
+.rejected {
+    background-color: #FF6347 !important; /* Custom color for Rejected status */
+    color: #fff !important; /* Light text on a dark background */
 }
 
 
