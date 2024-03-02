@@ -1,32 +1,34 @@
+import './JobSearch.css'
+
 const JobSearch = () => {
-    return ( 
+  return (
     <body>
-        <h1>Search Jobs</h1>
-        <input id="jobTitle" type="text" placeholder="Job Title"></input>
-        <input id="location" type="text" placeholder="Location"></input>
-        <select name="Salary" id="salary">
-            <option value="0-19999">less than £20,000</option>
-            <option value="20000-29999">£20,000-£29,999</option>
-            <option value="30000-39999">£30,000-£39,999</option>
-            <option value="40000-49999">£40,000-£49,999</option>
-            <option value="50000-60000">£50,000-£60,000</option>
-            <option value="60000-5000000">more than £60,000</option>
-        </select>
-        <select name="JobType" id="jobType">
-            <option value="Permanent">Permanent</option>
-            <option value="Contract">Contract</option>
-            <option value="AnyJobType">Any</option>
-        </select>
-        <select name="Hours" id="hours">
-            <option value="PartTime">Part Time</option>
-            <option value="FullTime">Full Time</option>
-            <option value="AnyHours">Any</option>
-        </select>
-        <button onClick={searchResults}>Search Now</button>
-        <button onClick={clearResults}>Clear Search Results</button>
-        <h2>Results</h2>
+      <h1>Search Jobs</h1>
+      <input id="jobTitle" type="text" placeholder="Job Title"></input>
+      <input id="location" type="text" placeholder="Location"></input>
+      <select name="Salary" id="salary">
+        <option value="0-19999">less than £20,000</option>
+        <option value="20000-29999">£20,000-£29,999</option>
+        <option value="30000-39999">£30,000-£39,999</option>
+        <option value="40000-49999">£40,000-£49,999</option>
+        <option value="50000-60000">£50,000-£60,000</option>
+        <option value="60000-5000000">more than £60,000</option>
+      </select>
+      <select name="JobType" id="jobType">
+        <option value="Permanent">Permanent</option>
+        <option value="Contract">Contract</option>
+        <option value="AnyJobType">Any</option>
+      </select>
+      <select name="Hours" id="hours">
+        <option value="PartTime">Part Time</option>
+        <option value="FullTime">Full Time</option>
+        <option value="AnyHours">Any</option>
+      </select>
+      <button onClick={searchResults}>Search Now</button>
+      <button onClick={clearResults}>Clear Search Results</button>
+      <h2>Results</h2>
     </body>
-    )
+  )
 }
 
 var basicAddress;
@@ -57,7 +59,7 @@ function salarySort(salaryrange) {
 }
 
 /* appends onto custom URL job type dependent on user choice */
- function jobTypeCheck(basicAddress, jobType) {
+function jobTypeCheck(basicAddress, jobType) {
   if (jobType === "Permanent") {
     basicAddress = basicAddress.concat("&permanent=1");
     return basicAddress
@@ -68,7 +70,7 @@ function salarySort(salaryrange) {
   }
   else {
     return basicAddress
-    }
+  }
 }
 
 /* appends onto custom URL hour type dependent on user choice */
@@ -98,11 +100,11 @@ function customURL(jobTitle, location, minsalary, maxsalary, jobType, hours) {
 function callAPI(customURL) {
   fetch(customURL)
     .then(function (response) {
-    return response.json();
-  })
+      return response.json();
+    })
     .then(function (data) {
       generateResults(data);
-        })
+    })
 }
 
 /* access data object and create div for each search result using properties available */
@@ -110,14 +112,14 @@ function generateResults(data) {
   var parentdiv = document.createElement('div');
   parentdiv.setAttribute('id', 'results');
   document.body.appendChild(parentdiv);
-for (let i = 0; i < data.results.length; i++) {
-  var div = document.createElement('div');
-  var a = document.createElement('a');
-  var link = document.createTextNode("CLICK HERE FOR FULL ADVERT");
-  a.appendChild(link); 
-  a.title = "CLICK HERE FOR FULL ADVERT";
-  a.href = data.results[i].redirect_url; 
-  div.innerHTML = `
+  for (let i = 0; i < data.results.length; i++) {
+    var div = document.createElement('div');
+    var a = document.createElement('a');
+    var link = document.createTextNode("CLICK HERE FOR FULL ADVERT");
+    a.appendChild(link);
+    a.title = "CLICK HERE FOR FULL ADVERT";
+    a.href = data.results[i].redirect_url;
+    div.innerHTML = `
   <strong>Job Title:</strong> ${data.results[i].title} <br /><br />
   <strong>Job Description:</strong> ${data.results[i].description}<br /><br />(use provided advert link below to see full description) <br /><br />
   <strong>Location:</strong> ${data.results[i].location.display_name} <br /><br />
@@ -125,16 +127,16 @@ for (let i = 0; i < data.results.length; i++) {
   <strong>Hours Type:</strong> ${data.results[i].contract_time} <br /><br />
   <strong>Job Type:</strong> ${data.results[i].contract_type} <br /><br />
   `;
-  div.setAttribute('class', 'resultsIndividual');
-  document.getElementById("results").appendChild(div).appendChild(a);
-}
+    div.setAttribute('class', 'resultsIndividual');
+    document.getElementById("results").appendChild(div).appendChild(a);
+  }
 }
 
 /* function for clearing current shown search results */
 function clearResults() {
   var element = document.getElementById("results");
   element.parentNode.removeChild(element);
-} 
+}
 
 
 export default JobSearch;
