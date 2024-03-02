@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function JobCard() {
     // Fetch job data from local storage or set an empty array if not available
@@ -12,7 +13,7 @@ function JobCard() {
                 return 'warning';
             case 'Applied':
                 return 'info';
-            case 'Interviewed':
+            case 'Interview':
                 return 'secondary';
             case 'Offered':
                 return 'success';
@@ -24,8 +25,9 @@ function JobCard() {
     };
 
     return (
-        <div>
-            {jobDataFromLocalStorage.map((job, index) => (
+        <Row xs={1} md={3} className="g-4">
+        {jobDataFromLocalStorage.map((job, index) => (
+            <Col key={index}>
                 <Card
                     key={index}
                     bg={getBackgroundColor(job.jobStatus)}
@@ -49,9 +51,10 @@ function JobCard() {
                         <Card.Text>Additional Notes: {job.additionalNotes}</Card.Text>
                     </Card.Body>
                 </Card>
-            ))}
-        </div>
-    );
-}
+                </Col>
+                ))}
+            </Row>
+        );
+    }
 
 export default JobCard;
