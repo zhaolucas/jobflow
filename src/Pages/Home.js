@@ -8,6 +8,8 @@ export default function Home() {
       <h1>HomePage</h1>
       <JobCard />
       <RandomQuote />
+      <JobCard />
+      <RandomQuote />
     </div>
   );
 }
