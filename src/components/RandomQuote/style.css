@@ -1,0 +1,29 @@
+.quoteContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 600px;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  .quoteText {
+    font-style: italic;
+    margin: 0;
+  }
+  
+  .quoteAuthor {
+    text-align: right;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
