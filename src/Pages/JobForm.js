@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import styles from "./JobForm.css";
+import "./JobForm.css";
 
 function JobForm({ onJobSubmit }) {
   const [jobData, setJobData] = useState({
     //creating an object for jobdata with the following key:values
     //setjobdata to update the variable we use setjobdata based on user input
+    id: Date.now(), // Generating a timestamp as a unique identifier
     companyName: "",
     jobTitle: "",
     description: "",
@@ -24,11 +25,19 @@ function JobForm({ onJobSubmit }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     //onJobSubmit(jobData);
+
+        // Set a unique identifier for each job
+        jobData.id = Date.now();
+
+        // Submit jobData to the parent component (if needed)
+        onJobSubmit && onJobSubmit(jobData);
+
     // Reset form after submission
     let allJobData = JSON.parse(localStorage.getItem("jobData")) || []
     allJobData.push(jobData)
     localStorage.setItem("jobData", JSON.stringify(allJobData));
     setJobData({
+      id: Date.now(),
       companyName: "",
       jobTitle: "",
       description: "",
