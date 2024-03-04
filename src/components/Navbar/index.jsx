@@ -10,9 +10,8 @@ function Navigation() {
                 <Container>
                     <Navbar.Brand href="#home">
                         <img
-                            src={`${process.env.PUBLIC_URL}/images/logo3.webp`} // Assuming logo3 is the complete filename including extension, e.g., logo3.svg or logo3.png
-                            alt="JobFlow Logo"
-                            style={{ marginRight: '10px', height: '30px' }} // Adjust size as needed
+                            src={`${process.env.PUBLIC_URL}/images/logo3.webp`}
+                            style={{ marginRight: '30px', height: '60px' }} 
                         />
                         JobFlow
                     </Navbar.Brand>
