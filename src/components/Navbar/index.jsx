@@ -8,10 +8,11 @@ function Navigation() {
         <>
             <Navbar expand="lg" className="nav-bg">
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="./">
                         <img
                             src={`${process.env.PUBLIC_URL}/images/logo3.webp`}
                             style={{ marginRight: '30px', height: '60px' }} 
+                            alt="JobFlow Logo"
                         />
                         JobFlow
                     </Navbar.Brand>
