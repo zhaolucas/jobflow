@@ -25,6 +25,7 @@ const JobSearch = () => {
       </select>
       <button onClick={searchResults} className='button'>Search Now</button>
       <button onClick={clearResults} className='button'>Clear Search Results</button>
+      <div id="results"></div>
     </body>
   )
 }
@@ -107,9 +108,7 @@ function callAPI(customURL) {
 
 /* access data object and create div for each search result using properties available */
 function generateResults(data) {
-  var parentdiv = document.createElement('div');
-  parentdiv.setAttribute('id', 'results');
-  document.body.appendChild(parentdiv);
+  var parentdiv = document.getElementById("results");
   for (let i = 0; i < data.results.length; i++) {
     var div = document.createElement('div');
     var a = document.createElement('a');
@@ -126,7 +125,7 @@ function generateResults(data) {
   <strong>Job Type:</strong> ${data.results[i].contract_type} <br /><br />
   `;
     div.setAttribute('class', 'resultsIndividual');
-    document.getElementById("results").appendChild(div).appendChild(a);
+    parentdiv.appendChild(div).appendChild(a);
   }
 }
 
