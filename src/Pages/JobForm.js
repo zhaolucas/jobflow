@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./JobForm.css";
+import "./style.css";
 
 function JobForm({ onJobSubmit }) {
   const [jobData, setJobData] = useState({

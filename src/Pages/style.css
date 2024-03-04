@@ -1,0 +1,96 @@
+/* Resetting default margin and padding */
+* {
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Setting black background */
+body {
+    background-color: #000;
+    color: #fff;
+    /* Setting text color to white for better visibility */
+}
+
+/* Styling input elements */
+input[type="text"], input[type="url"], select, button, textarea, option, #addJob, .resultsIndividual {
+    width: 95%;
+    /* Remove default border */
+    border-radius: 5px !important;
+    /* Add border radius for rounded corners */
+    /* Lighter blue background */
+    color: #fff;
+    /* Text color */
+    border: none;
+    margin: 10px 5px 0px 5px !important;
+    padding: 10px;
+    font-family: "Bebas Neue", sans-serif !important;
+    font-size: 18px !important;
+}
+
+input[type="text"], input[type="url"], select, textarea, option {
+background-color: rgb(10, 71, 140);
+}
+
+#addJob, button {
+    background-color: rgb(0, 51, 102);
+}
+
+
+/* Styling select dropdown options */
+option {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Styling button */
+
+/* Hover effect for button */
+button:hover,  #addJob:hover {
+    background-color: rgba(10, 71, 140, 0.5);
+    /* Darker blue on hover */
+}
+
+.pageTitle {
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.displayHeading {
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+
+
+
+#results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+}
+
+.resultsIndividual  {
+    display: flex;
+    flex-direction: column;
+    width: 99%;
+    border: solid white 2px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    text-wrap: wrap;
+    background-color: rgb(10, 71, 140);
+    font-family: "Bebas Neue", sans-serif;
+}
+ 
+.resultsIndividual a
+{
+color: white;
+}
+
+
+

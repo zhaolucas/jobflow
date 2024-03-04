@@ -6,6 +6,18 @@
     color: white !important; 
     transition: color 0.3s ease-in-out; 
   }
+
+  .navbar-brand
+  {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 26px !important;
+  }
+
+  .nav-link
+  {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px !important;
+  }
   
   .navbar-brand:hover, .nav-link:hover {
     color: #f8f9fa !important; 
