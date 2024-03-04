@@ -1,9 +1,8 @@
-import './JobSearch.css'
+import './style.css'
 
 const JobSearch = () => {
   return (
     <body>
-      <h1 className='pageTitle'>Search Jobs</h1>
       <input id="jobTitle" type="text" placeholder="Job Title"></input>
       <input id="location" type="text" placeholder="Location"></input>
       <select name="Salary" id="salary" className='dropDown'>
@@ -26,7 +25,6 @@ const JobSearch = () => {
       </select>
       <button onClick={searchResults} className='button'>Search Now</button>
       <button onClick={clearResults} className='button'>Clear Search Results</button>
-      <h2 className='displayHeading'>Results</h2>
     </body>
   )
 }
