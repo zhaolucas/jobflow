@@ -1,0 +1,21 @@
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .footer-logo {
+    height: 60px;
+  }
+  
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Pacifico', cursive; 
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
