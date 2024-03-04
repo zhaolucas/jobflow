@@ -59,6 +59,7 @@ function JobCard() {
                     >
                         <Card.Header>Company Name: {job.companyName}</Card.Header>
                         <Card.Body>
+                            <Card.Text>Job Status: {job.jobStatus}</Card.Text>
                             <Card.Title>Job Title: {job.jobTitle} </Card.Title>
                             <Card.Text>Job Description: {job.description}</Card.Text>
                             <Card.Text>Salary: {job.salary}</Card.Text>
@@ -66,7 +67,6 @@ function JobCard() {
                             <Card.Text>Job Type: {job.jobType}</Card.Text>
                             <Card.Text>Employment Type: {job.employmentType}</Card.Text>
                             <Card.Text>Link To Job Advert: {job.linkToAd}</Card.Text>
-                            <Card.Text>Job Status: {job.jobStatus}</Card.Text>
                             <Card.Text>Additional Notes: {job.additionalNotes}</Card.Text>
                         </Card.Body>
                     </Card>

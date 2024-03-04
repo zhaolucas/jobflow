@@ -1,26 +1,18 @@
-/* Resetting default margin and padding */
 * {
     margin: 10;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Setting black background */
 body {
     background-color: #000;
     color: #fff;
-    /* Setting text color to white for better visibility */
 }
 
-/* Styling input elements */
 input[type="text"], input[type="url"], select, button, textarea, option, #addJob, .resultsIndividual {
     width: 95%;
-    /* Remove default border */
     border-radius: 5px !important;
-    /* Add border radius for rounded corners */
-    /* Lighter blue background */
     color: #fff;
-    /* Text color */
     border: none;
     margin: 10px 5px 0px 5px !important;
     padding: 10px;
@@ -37,18 +29,13 @@ background-color: rgb(10, 71, 140);
 }
 
 
-/* Styling select dropdown options */
 option {
     background-color: #333;
     color: #fff;
 }
 
-/* Styling button */
-
-/* Hover effect for button */
 button:hover,  #addJob:hover {
     background-color: rgba(10, 71, 140, 0.5);
-    /* Darker blue on hover */
 }
 
 .pageTitle {
@@ -60,9 +47,6 @@ button:hover,  #addJob:hover {
     margin-bottom: 5px;
     color: #fff;
 }
-
-
-
 
 #results {
     display: flex;
