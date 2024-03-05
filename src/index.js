@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import * as bootstrap from 'bootstrap';
+// eslint-disable-next-line no-unused-vars
+import * as bootstrap from 'bootstrap'; 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
