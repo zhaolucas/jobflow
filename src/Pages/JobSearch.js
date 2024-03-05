@@ -140,8 +140,10 @@ else {
 
 /* function for clearing current shown search results */
 function clearResults() {
+  var check = document.getElementById('childdiv');
+  if (check !== null) {
   var element = document.getElementById("childdiv");
-  element.parentNode.removeChild(element);
+  element.parentNode.removeChild(element);}
 }
 
 
