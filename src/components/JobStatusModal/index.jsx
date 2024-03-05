@@ -10,7 +10,7 @@ const JobStatusModal = ({ job, showModal, handleClose, handleUpdate }) => {
     };
     
     const handleSave = () => {
-        handleUpdate(newStatus, job.id);  // Pass job ID to handleUpdate
+        handleUpdate(newStatus, job.id);
         handleClose();
     };
 

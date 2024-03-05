@@ -1,29 +1,26 @@
 .nav-bg {
-    background-color: rgb(55, 53, 53); 
-  }
-  
-  .navbar-brand, .nav-link {
-    color: white !important; 
-    transition: color 0.3s ease-in-out; 
-  }
+  background-color: #343a40; /* Dark background color */
+}
 
-  .navbar-brand
-  {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 26px !important;
-  }
+.navbar-brand, .nav-link {
+  color: white !important; 
+  transition: color 0.3s ease-in-out; 
+}
 
-  .nav-link
-  {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 20px !important;
-  }
-  
-  .navbar-brand:hover, .nav-link:hover {
-    color: #f8f9fa !important; 
-  }
-  
-  .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.927); 
-  }
-  
+.navbar-brand {
+  font-family: 'Pacifico', cursive; 
+  font-size: 26px !important; 
+}
+
+.nav-link {
+  font-family: 'Pacifico', cursive; 
+  font-size: 20px !important; 
+}
+
+.navbar-brand:hover, .nav-link:hover {
+  color: #f8f9fa !important; 
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.927); 
+}

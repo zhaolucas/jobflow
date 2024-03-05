@@ -3,9 +3,7 @@ import "./style.css";
 
 function JobForm({ onJobSubmit }) {
   const [jobData, setJobData] = useState({
-    //creating an object for jobdata with the following key:values
-    //setjobdata to update the variable we use setjobdata based on user input
-    id: Date.now(), // Generating a timestamp as a unique identifier
+    id: Date.now(), 
     companyName: "",
     jobTitle: "",
     description: "",
@@ -13,7 +11,6 @@ function JobForm({ onJobSubmit }) {
     salary: "",
     jobType: "",
     employmentType: "",
-    linkToAd: "",
     jobStatus: "",
     additionalNotes: "",
   });
@@ -24,15 +21,11 @@ function JobForm({ onJobSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //onJobSubmit(jobData);
 
-        // Set a unique identifier for each job
         jobData.id = Date.now();
 
-        // Submit jobData to the parent component (if needed)
         onJobSubmit && onJobSubmit(jobData);
 
-    // Reset form after submission
     let allJobData = JSON.parse(localStorage.getItem("jobData")) || []
     allJobData.push(jobData)
     localStorage.setItem("jobData", JSON.stringify(allJobData));
@@ -45,7 +38,6 @@ function JobForm({ onJobSubmit }) {
       salary: "",
       jobType: "",
       employmentType: "",
-      linkToAd: "",
       jobStatus: "",
       additionalNotes: "",
     });
@@ -143,14 +135,6 @@ function JobForm({ onJobSubmit }) {
         <option value="Offered">Offered</option>
         <option value="Rejected">Rejected</option>
       </select>
-      <input
-        type="url"
-        className="inputText"
-        name="linkToAd"
-        value={jobData.linkToAd}
-        onChange={handleChange}
-        placeholder="Link to Job Advert/ Application Portal"
-      />
       <textarea
         name="additionalNotes"
         className="inputText"

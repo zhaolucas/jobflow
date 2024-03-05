@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style.css'; 
-import quoteImage from './quote2.webp'; 
+import quoteImage from './quote4.webp'; 
 
 function RandomQuote() {
   const [randomQuote, setRandomQuote] = useState(null);
