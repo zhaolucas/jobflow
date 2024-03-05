@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaGithub } from 'react-icons/fa';
-import style from './style.css';
+import './style.css'; 
 
 function Footer() {
     return (
