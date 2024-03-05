@@ -29,7 +29,7 @@ APIs: final ones used.
 `I want a platform where I can not only search for relevant job opportunities but also track my job applications and progress,`  
 `So that I can manage my job search more efficiently and increase my chances of landing a job that matches my skills and aspirations.`  
 
-Link to the deployed application: https://zhaolucas.github.io/jobflow (to be deployed to netlify)
+Link to the deployed application: https://main--job-flow-app.netlify.app/
 
 ## Presentation: 
 
