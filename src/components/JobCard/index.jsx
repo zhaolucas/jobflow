@@ -77,9 +77,9 @@ function JobCard() {
                             <Card.Title>Job Title: {job.jobTitle} </Card.Title>
                             <Card.Title className='jobStatus'>Job Status: {job.jobStatus}</Card.Title>
                             <Card.Text>Job Description: {job.description}</Card.Text>
-                            <Card.Text>Salary: {job.salary}</Card.Text>
+                            <Card.Title>Salary: {job.salary}</Card.Title>
                             <Card.Text>Location: {job.location}</Card.Text>
-                            <Card.Text>Job Type: {job.jobType}</Card.Text>
+                            <Card.Title>Job Type: {job.jobType}</Card.Title>
                             <Card.Text>Employment Type: {job.employmentType}</Card.Text>
                             <Card.Text>Additional Notes: {job.additionalNotes}</Card.Text>
                         </Card.Body>
