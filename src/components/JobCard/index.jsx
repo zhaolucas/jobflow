@@ -46,11 +46,26 @@ function JobCard() {
             default:
                 return 'dark';
         }
+
     };
+
+    const sortedJobData = jobDataFromLocalStorage.slice().sort((a, b) => {
+        // Customize the sorting logic based on your job status order
+        const statusOrder = {
+            'Interested': 1,
+            'Applied': 2,
+            'Interview': 3,
+            'Offered': 4,
+            'Rejected': 5,
+        };
+
+        return statusOrder[a.jobStatus] - statusOrder[b.jobStatus];
+    })
+
 
     return (
         <Row xs={1} md={3} className="g-4">
-            {jobDataFromLocalStorage.map((job) => (
+            {sortedJobData.map((job) => (
                 <Col key={job.id}>
                     <Card
                         className={`mb-2 ${getBackgroundColor(job.jobStatus)}`}
@@ -59,21 +74,20 @@ function JobCard() {
                     >
                         <Card.Header>Company Name: {job.companyName}</Card.Header>
                         <Card.Body>
-                            <Card.Text>Job Status: {job.jobStatus}</Card.Text>
                             <Card.Title>Job Title: {job.jobTitle} </Card.Title>
+                            <Card.Title className='jobStatus'>Job Status: {job.jobStatus}</Card.Title>
                             <Card.Text>Job Description: {job.description}</Card.Text>
                             <Card.Text>Salary: {job.salary}</Card.Text>
                             <Card.Text>Location: {job.location}</Card.Text>
                             <Card.Text>Job Type: {job.jobType}</Card.Text>
                             <Card.Text>Employment Type: {job.employmentType}</Card.Text>
-                            <Card.Text>Link To Job Advert: {job.linkToAd}</Card.Text>
                             <Card.Text>Additional Notes: {job.additionalNotes}</Card.Text>
                         </Card.Body>
                     </Card>
                 </Col>
             ))}
-             {/* Render the JobStatusModal */}
-             {selectedJob && (
+            {/* Render the JobStatusModal */}
+            {selectedJob && (
                 <JobStatusModal
                     job={selectedJob}
                     showModal={showModal}
