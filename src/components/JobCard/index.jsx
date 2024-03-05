@@ -80,7 +80,7 @@ function JobCard() {
                             <Card.Title>Salary: {job.salary}</Card.Title>
                             <Card.Text>Location: {job.location}</Card.Text>
                             <Card.Title>Job Type: {job.jobType}</Card.Title>
-                            <Card.Text>Employment Type: {job.employmentType}</Card.Text>
+                            <Card.Text>Hours Type: {job.employmentType}</Card.Text>
                             <Card.Text>Additional Notes: {job.additionalNotes}</Card.Text>
                         </Card.Body>
                     </Card>
