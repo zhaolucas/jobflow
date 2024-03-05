@@ -108,7 +108,11 @@ function callAPI(customURL) {
 
 /* access data object and create div for each search result using properties available */
 function generateResults(data) {
+  var check = document.getElementById('childdiv');
+  if (check === null) {  
   var parentdiv = document.getElementById("results");
+  var childdiv = document.createElement('div');
+  childdiv.setAttribute("id","childdiv");
   for (let i = 0; i < data.results.length; i++) {
     var div = document.createElement('div');
     var a = document.createElement('a');
@@ -125,15 +129,24 @@ function generateResults(data) {
   <strong>Job Type:</strong> ${data.results[i].contract_type} <br /><br />
   `;
     div.setAttribute('class', 'resultsIndividual');
-    parentdiv.appendChild(div).appendChild(a);
+    childdiv.appendChild(div).appendChild(a);
   }
+  parentdiv.appendChild(childdiv);}
+else {
+  clearResults()
+  generateResults(data)
+}
 }
 
 /* function for clearing current shown search results */
 function clearResults() {
-  var element = document.getElementById("results");
+  var element = document.getElementById("childdiv");
   element.parentNode.removeChild(element);
 }
+
+
+var check = document.getElementById('childdiv');
+if (check === null) ;
 
 
 export default JobSearch;
