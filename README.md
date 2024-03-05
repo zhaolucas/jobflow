@@ -29,7 +29,7 @@ APIs: final ones used.
 `I want a platform where I can not only search for relevant job opportunities but also track my job applications and progress,`  
 `So that I can manage my job search more efficiently and increase my chances of landing a job that matches my skills and aspirations.`  
 
-Link to the deployed application: https://zhaolucas.github.io/jobflow (to be deployed to netlify)
+Link to the deployed application: https://main--job-flow-app.netlify.app/
 
 ## Presentation: 
 
@@ -77,16 +77,13 @@ Have both GET and POST routes for retrieving and adding new data.
 Be deployed using Netlify.
 Use at least two libraries, packages, or technologies that we haven't discussed.
 Have a polished front end/UI.
-Meet good quality coding standards (indentation, scoping, naming).
-Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
 ## Credits
 
-1) TA: Jack Labukas, Zakariya Hussain
+1) TA: Jack Labukas, Martin William 
 2) Instructor: Laura Cole
 3) Group members: ​Sophie Ebsworth, Ben Sadler, Michael Erg, Levan Burchuladze
-4) Personal Tutors
-5) Resources: Rapid API, W3 Schools
+4) Resources: Rapid API, W3 Schools, Stackover Flow, ChatGPT 
 
 ## Contribution
 
