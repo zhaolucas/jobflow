@@ -88,7 +88,7 @@ function JobForm({ onJobSubmit }) {
         onChange={handleChange}
         required
       >
-        <option value="">-Select-</option>
+        <option value="">-Select Salary-</option>
         <option value="below £20,000">Below £20,000</option>
         <option value="£20,000-29,999">£20,000-29,999</option>
         <option value="£30,000-39,999">£30,000-39,999</option>
@@ -104,7 +104,7 @@ function JobForm({ onJobSubmit }) {
         onChange={handleChange}
         required
       >
-        <option value="">-Select-</option>
+        <option value="">-Select Job Type-</option>
         <option value="remote">Remote</option>
         <option value="on-site">On-Site</option>
         <option value="hybrid">Hybrid</option>
@@ -117,7 +117,7 @@ function JobForm({ onJobSubmit }) {
         onChange={handleChange}
         required
       >
-        <option value="">-Select-</option>
+        <option value="">-Select Employment Type-</option>
         <option value="full-time">Full-Time</option>
         <option value="part-time">Part-Time</option>
         <option value="contract">Contract</option>
@@ -132,7 +132,7 @@ function JobForm({ onJobSubmit }) {
         onChange={handleChange}
         required
       >
-        <option value="">-Select-</option>
+        <option value="">-Select Job Status-</option>
         <option value="Interested">Interested</option>
         <option value="Applied">Applied</option>
         <option value="Interview">Interview Stage</option>
