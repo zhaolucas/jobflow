@@ -117,7 +117,7 @@ function JobForm({ onJobSubmit }) {
         onChange={handleChange}
         required
       >
-        <option value="">-Select Employment Type-</option>
+        <option value="">-Select Hours Type-</option>
         <option value="full-time">Full-Time</option>
         <option value="part-time">Part-Time</option>
         <option value="contract">Contract</option>

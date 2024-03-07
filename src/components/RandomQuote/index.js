@@ -10,9 +10,12 @@ function RandomQuote() {
       .then(response => response.json())
       .then(data => {
         const randomIndex = Math.floor(Math.random() * data.length);
-        setRandomQuote(data[randomIndex]);
+        const quote = data[randomIndex];
+        quote.author = quote.author.replace(", type.fit", "").replace("type.fit", ""); 
+        setRandomQuote(quote);
       });
   }, []);
+  
 
   return (
     <div
