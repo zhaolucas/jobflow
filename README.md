@@ -67,7 +67,7 @@ jobflow simplifies job hunting and application tracking. The main sections inclu
 
 The following animation demonstrates the application functionality:
 
-![screenshot of the website](<to be screenshot>)
+![screenshot of the website](./public/images/screencapture.png)
 
 ## Features
 
